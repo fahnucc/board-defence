@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33eb54dabc69945a6bc0269dd84830e8, type: 3}
+  m_Name: DefenceItem2
+  m_EditorClassIdentifier: 
+  damage: 5
+  range: 2
+  interval: 4
+  direction: 0
+  prefab: {fileID: 3626555921416848749, guid: f8637d0544cce485fb9579558141588b, type: 3}
+  projectilePrefab: {fileID: 6242551291604618724, guid: 04de87c8fd74e4794bd2535e6e53d85a, type: 3}
+  projectileSpeed: 20
+  image: {fileID: 21300000, guid: f1b301e9112fc423eb4086db26a5abcf, type: 3}

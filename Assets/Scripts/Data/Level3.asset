@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aefbfe50a5ec143a39bda875ca267264, type: 3}
+  m_Name: Level3
+  m_EditorClassIdentifier: 
+  levelName: Level3
+  spawnDelay: 1.5
+  enemyWaves:
+  - enemyType: {fileID: 11400000, guid: 6d945b4b6f3374a16b14093a4f7109ae, type: 2}
+    count: 7
+  - enemyType: {fileID: 11400000, guid: ff6e37499263d402b891c304ae15a770, type: 2}
+    count: 3
+  - enemyType: {fileID: 11400000, guid: b818497ce4693481c92b14848752637b, type: 2}
+    count: 5
+  defenceItemInventory:
+  - defenceItemType: {fileID: 11400000, guid: f12357b7ed7ac4d97a3dce46fda1ea46, type: 2}
+    count: 5
+  - defenceItemType: {fileID: 11400000, guid: 901fd94eb1bf64d948828d96aa760dc2, type: 2}
+    count: 7
+  - defenceItemType: {fileID: 11400000, guid: 44c7383742a604db388fa904301a5074, type: 2}
+    count: 5
+  gridWidth: 4
+  gridHeight: 8
+  placeableMinRow: 0
+  placeableMaxRow: 3
