@@ -145,6 +145,7 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  - {fileID: -944628639613478452, guid: 3ed4aa8b56b3e44799e8443dbfb05800, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -168,7 +169,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.UnityTechnologies.UniversalMobile3DTemplate
     Standalone: com.UnityTechnologies.UniversalMobile3DTemplate
-    iPhone: com.UnityTechnologies.UniversalMobile3DTemplate
+    iPhone: com.fahri.boarddefence
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -519,7 +520,10 @@ PlayerSettings:
       m_Height: 720
       m_Kind: 1
       m_SubKind: 
-  m_BuildTargetBatching: []
+  m_BuildTargetBatching:
+  - m_BuildTarget: iPhone
+    m_StaticBatching: 1
+    m_DynamicBatching: 0
   m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs: []
   m_BuildTargetGraphicsJobMode: []

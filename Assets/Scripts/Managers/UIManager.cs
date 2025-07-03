@@ -55,6 +55,8 @@ public class UIManager : MonoBehaviour
 
     public void ShowPlacementPopup(Cell targetCell)
     {
+        if (gameOverPopup.activeSelf) return;
+        
         selectedCell?.UpdateVisuals();
 
         foreach (Transform child in buttonContainer) { Destroy(child.gameObject); }

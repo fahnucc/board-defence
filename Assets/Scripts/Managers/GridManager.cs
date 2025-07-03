@@ -84,7 +84,7 @@ public class GridManager : MonoBehaviour
 
         for (int x = 0; x < gridWidth; x++)
         {
-            Vector3 localPosition = new Vector3(x * (cellSize + padding), 0.1f, topRowY * (cellSize + padding));
+            Vector3 localPosition = new Vector3(x * (cellSize + padding), 1.1f, topRowY * (cellSize + padding));
 
             positions[x] = gridContainer.TransformPoint(localPosition);
         }

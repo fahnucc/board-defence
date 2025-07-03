@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
@@ -7,6 +6,7 @@ public class InputManager : MonoBehaviour
 {
     private UIManager uiManager;
     public LayerMask cellLayer;
+    [SerializeField] private Camera mainCamera;
 
     private PlayerInput playerInput;
     private InputAction clickAction;
@@ -15,13 +15,19 @@ public class InputManager : MonoBehaviour
     void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
-        clickAction = playerInput.actions["Click"];
+        clickAction = playerInput.actions.FindAction("Gameplay/Click");
+        pointAction = playerInput.actions.FindAction("Gameplay/Point");
     }
 
     public void Initialize(UIManager uiManager) { this.uiManager = uiManager; }
 
     void Update()
     {
+        if (clickAction == null || pointAction == null || uiManager == null || mainCamera == null)
+        {
+            return;
+        }
+
         if (clickAction.WasPressedThisFrame())
         {
             if (EventSystem.current.IsPointerOverGameObject())
@@ -29,7 +35,9 @@ public class InputManager : MonoBehaviour
                 return;
             }
 
-            Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+            Vector2 screenPosition = pointAction.ReadValue<Vector2>();
+            Ray ray = mainCamera.ScreenPointToRay(screenPosition);
+
             if (Physics.Raycast(ray, out RaycastHit hit, 100f, cellLayer))
             {
                 Cell clickedCell = hit.collider.GetComponent<Cell>();
